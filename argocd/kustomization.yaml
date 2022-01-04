@@ -8,9 +8,16 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.2.2/manifests/install.yaml
 #- https://raw.githubusercontent.com/argoproj/argo-cd/v2.0.4/manifests/ha/install.yaml
 
-patches:
-- path: application-controller.yaml
-- path: repo-server.yaml
-- path: server.yaml
-- path: dex-server.yaml
+images:
+  - name: quay.io/argoproj/argocd
+    newName: alinbalutoiu/argocd
+  - name: ghcr.io/dexidp/dex
+    newName: dexidp/dex
+
+
+#patches:
+#- path: application-controller.yaml
+#- path: repo-server.yaml
+#- path: server.yaml
+#- path: dex-server.yaml
 #namePrefix: test-
