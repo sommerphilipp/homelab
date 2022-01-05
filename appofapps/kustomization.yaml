@@ -1,2 +1,3 @@
 resources:
 - sealedsecrets.yaml
+- mariadb.yaml
